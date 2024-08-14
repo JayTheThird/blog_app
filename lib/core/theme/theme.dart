@@ -12,7 +12,7 @@ class AppTheme {
 
   static final _errorBorder = OutlineInputBorder(
     borderSide: const BorderSide(
-      color: Colors.red,
+      color: Color.fromARGB(239, 244, 67, 54),
       width: 2,
     ),
     borderRadius: BorderRadius.circular(10),
@@ -25,6 +25,10 @@ class AppTheme {
       enabledBorder: _border(),
       focusedBorder: _border(AppPallete.gradient3),
       errorBorder: _errorBorder, // pending to add shade
+      focusedErrorBorder: _border(AppPallete.gradient3),
+      errorStyle: TextStyle(
+        color: Colors.red[300],
+      ),
     ),
   );
 }
