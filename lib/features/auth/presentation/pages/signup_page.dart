@@ -1,9 +1,11 @@
 import 'package:blog_app/core/theme/app_pallete.dart';
 import 'package:blog_app/core/theme/spacing.dart';
+import 'package:blog_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:blog_app/features/auth/presentation/pages/login_page.dart';
 import 'package:blog_app/features/auth/presentation/widgets/auth_field.dart';
 import 'package:blog_app/features/auth/presentation/widgets/auth_gradient_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignupPage extends StatefulWidget {
   static route() => MaterialPageRoute(
@@ -91,7 +93,15 @@ class _SignupPageState extends State<SignupPage> {
                   AuthGradientButton(
                     title: "Sign up.",
                     onPressed: () {
-                      _formKey.currentState!.validate();
+                      if (_formKey.currentState!.validate()) {
+                        context.read<AuthBloc>().add(
+                              AuthSignup(
+                                username: _usernameController.text.trim(),
+                                email: _emailController.text.trim(),
+                                password: _passwordController.text.trim(),
+                              ),
+                            );
+                      }
                     },
                   ),
                   Spacing.gep20,

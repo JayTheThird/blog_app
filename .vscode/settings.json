@@ -4,7 +4,8 @@
         "Datasource",
         "fpdart",
         "signin",
-        "Signup"
+        "Signup",
+        "usecase"
     ],
     "editor.formatOnSave": true,
     "files.autoSave": "afterDelay"
