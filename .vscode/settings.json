@@ -1,7 +1,11 @@
 {
     "java.compile.nullAnalysis.mode": "disabled",
     "cSpell.words": [
+        "Datasource",
+        "fpdart",
         "signin",
         "Signup"
-    ]
+    ],
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay"
 }
