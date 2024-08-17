@@ -25,6 +25,12 @@ class _SignupPageState extends State<SignupPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
+  void _clearTextFields() {
+    _usernameController.clear();
+    _emailController.clear();
+    _passwordController.clear();
+  }
+
   @override
   void dispose() {
     _usernameController.dispose();
@@ -101,6 +107,7 @@ class _SignupPageState extends State<SignupPage> {
                                 password: _passwordController.text.trim(),
                               ),
                             );
+                        _clearTextFields();
                       }
                     },
                   ),

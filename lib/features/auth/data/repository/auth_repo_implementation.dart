@@ -1,6 +1,6 @@
 import 'package:blog_app/core/error/failures.dart';
 import 'package:blog_app/core/error/server_exceptions.dart';
-import 'package:blog_app/features/auth/data/datasource/auth_supabase_datasource.dart';
+import 'package:blog_app/features/auth/data/datasource/auth_remote_datasource.dart';
 import 'package:blog_app/features/auth/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
